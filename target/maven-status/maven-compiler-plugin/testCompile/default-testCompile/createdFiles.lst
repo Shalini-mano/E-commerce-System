@@ -1,0 +1,7 @@
+com\ecommerce\repo\ProductRepositoryTest.class
+com\ecommerce\service\OrderServiceTest.class
+com\ecommerce\repo\CartRepositoryTest.class
+com\ecommerce\repo\OrderRepositoryTest.class
+com\ecommerce\repo\UserRepositoryTest.class
+com\ecommerce\service\ProductServiceTest.class
+com\ecommerce\service\CartServiceTest.class
