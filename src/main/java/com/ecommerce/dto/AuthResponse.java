@@ -1,12 +1,13 @@
-package com.ecommerce.dto.response;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+package com.ecommerce.dto;
 
 public class AuthResponse {
 
     private String token;
     private String email;
     private String role;
+
+    public AuthResponse() {
+    }
 
     public AuthResponse(String token, String email, String role) {
         this.token = token;

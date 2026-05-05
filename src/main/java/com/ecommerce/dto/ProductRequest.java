@@ -2,24 +2,26 @@ package com.ecommerce.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Data;
+import jakarta.validation.constraints.Positive;
 
-@Data
-public class CreateProductRequest {
+public class ProductRequest {
 
     @NotBlank(message = "Name is required")
     private String name;
 
     private String description;
 
-    @Min(value = 0, message = "Price cannot be negative")
+    @Positive(message = "Price must be positive")
     private double price;
 
     @Min(value = 0, message = "Stock cannot be negative")
-    private int stock;
+    private int stockQuantity;
 
     @NotBlank(message = "Category is required")
     private String category;
+
+    public ProductRequest() {
+    }
 
     public String getName() {
         return name;
@@ -45,12 +47,12 @@ public class CreateProductRequest {
         this.price = price;
     }
 
-    public int getStock() {
-        return stock;
+    public int getStockQuantity() {
+        return stockQuantity;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setStockQuantity(int stockQuantity) {
+        this.stockQuantity = stockQuantity;
     }
 
     public String getCategory() {
@@ -58,14 +60,6 @@ public class CreateProductRequest {
     }
 
     public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public CreateProductRequest(String name, String description, double price, int stock, String category) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.stock = stock;
         this.category = category;
     }
 }
