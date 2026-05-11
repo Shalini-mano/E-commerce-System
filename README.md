@@ -557,7 +557,7 @@ The application is deployed on **Render** using Docker.
 ## Project Structure
 
 ```
-src/main/java/com/yourname/ecommerce/
+src/main/java/com/ecommerce/
 ├── config/
 │   ├── MongoConfig.java
 │   ├── SecurityConfig.java
